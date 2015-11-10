@@ -15,7 +15,7 @@ public class GreetingController {
     
     @RequestMapping("/")
     public String test() {
-        return "test";
+        return "test2";
     }
     
     @RequestMapping("/greeting")
