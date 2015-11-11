@@ -16,34 +16,29 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class GreetingControllerTest extends AbstractContextControllerTests {
 
-	private MockMvc mockMvc;
+  private MockMvc mockMvc;
 
-	@Before
-	public void setup() {
+  @Before
+  public void setup() {
 
-		mockMvc = MockMvcBuilders.webAppContextSetup(this.wac)
-				.build();
-	}
+    mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+  }
 
-	@Test
-	public void test() throws Exception {
+  @Test
+  public void test() throws Exception {
 
-		mockMvc.perform(get("/"))
-				.andExpect(status().isOk())
-				.andExpect(
-						content().contentType(MediaType.TEXT_PLAIN));
+    mockMvc.perform(get("/")).andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.TEXT_PLAIN));
 
-	}
+  }
 
-	@Test
-	public void greeting() throws Exception {
+  @Test
+  public void greeting() throws Exception {
 
-		mockMvc.perform(get("/greeting"))
-				.andExpect(status().isOk())
-				.andExpect(
-						content().contentType(MediaType.APPLICATION_JSON_VALUE))
-				.andExpect(jsonPath("$.content").value("Hello, World!"));
+    mockMvc.perform(get("/greeting")).andExpect(status().isOk())
+        .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
+        .andExpect(jsonPath("$.content").value("Hello, World!"));
 
-	}
+  }
 
 }
