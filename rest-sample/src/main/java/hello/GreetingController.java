@@ -18,7 +18,7 @@ public class GreetingController {
     @RequestMapping(value = "/", method = RequestMethod.GET, 
 			produces = "text/plain")
     public String test() {
-        return "testWithError";
+        return "testOK";
     }
     
     @RequestMapping(value = "/greeting", method = RequestMethod.GET, 

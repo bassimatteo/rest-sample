@@ -42,7 +42,7 @@ public class GreetingControllerTest extends AbstractContextControllerTests {
 				.andExpect(status().isOk())
 				.andExpect(
 						content().contentType(MediaType.APPLICATION_JSON_VALUE))
-				.andExpect(jsonPath("$.content").value("Hello, World"));
+				.andExpect(jsonPath("$.content").value("Hello, World!"));
 
 	}
 
