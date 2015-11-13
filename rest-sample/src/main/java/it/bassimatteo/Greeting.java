@@ -1,4 +1,4 @@
-package hello;
+package it.bassimatteo;
 
 public class Greeting {
 
@@ -17,4 +17,5 @@ public class Greeting {
   public String getContent() {
     return content;
   }
+
 }

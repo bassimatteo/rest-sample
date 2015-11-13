@@ -7,21 +7,28 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-public class GreetingControllerTest extends AbstractContextControllerTests {
+public class GreetingControllerTest extends it.bassimatteo.config.WebAppConfigurationAware {
+
+  @Autowired
+  private WebApplicationContext wac;
 
   private MockMvc mockMvc;
 
-  @Before
-  public void setup() {
+  @InjectMocks
+  private GreetingController greetingController;
 
-    mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
+  @Before
+  public void setUp() {
+    MockitoAnnotations.initMocks(this);
+    mockMvc = MockMvcBuilders.webAppContextSetup(wac).dispatchOptions(true).build();
   }
 
   @Test
@@ -40,5 +47,4 @@ public class GreetingControllerTest extends AbstractContextControllerTests {
         .andExpect(jsonPath("$.content").value("Hello, World!"));
 
   }
-
 }
