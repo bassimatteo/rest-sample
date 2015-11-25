@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://editor.swagger.io/#/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><meta charset="utf-8"><title>Swagger Editor</title><meta name="description" content="Swagger Editor"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/png" href="http://editor.swagger.io/images/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="http://editor.swagger.io/images/favicon-16x16.png" sizes="16x16"><link rel="stylesheet" href="./Swagger Editor_files/main.css"><link rel="stylesheet" href="./Swagger Editor_files/branding.css"><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><style>.ngf-hide{display:none !important}</style><script src="./Swagger Editor_files/yaml.js"></script><style id="ace-atom-dark">.ace-atom-dark .ace_gutter {background: #1a1a1a;color: #868989}.ace-atom-dark .ace_print-margin {width: 1px;background: #1a1a1a}.ace-atom-dark {background-color: #1d1f21;color: #A8FF60}.ace-atom-dark .ace_cursor {color: white}.ace-atom-dark .ace_marker-layer .ace_selection {background: #444444}.ace-atom-dark.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #000000;border-radius: 2px}.ace-atom-dark .ace_marker-layer .ace_step {background: rgb(102, 82, 0)}.ace-atom-dark .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid #888888}.ace-atom-dark .ace_marker-layer .ace_highlight {border: 1px solid rgb(110, 119, 0);border-bottom: 0;box-shadow: inset 0 -1px rgb(110, 119, 0);margin: -1px 0 0 -1px;background: rgba(255, 235, 0, 0.1);}.ace-atom-dark .ace_marker-layer .ace_active-line {background: #2A2A2A}.ace-atom-dark .ace_gutter-active-line {background-color: #2A2A2A}.ace-atom-dark .ace_stack {background-color: rgb(66, 90, 44)}.ace-atom-dark .ace_marker-layer .ace_selected-word {border: 1px solid #888888}.ace-atom-dark .ace_invisible {color: #343434}.ace-atom-dark .ace_keyword,.ace-atom-dark .ace_meta,.ace-atom-dark .ace_storage,.ace-atom-dark .ace_storage.ace_type,.ace-atom-dark .ace_support.ace_type {color: #96CBFE}.ace-atom-dark .ace_keyword.ace_operator {color: #70C0B1}.ace-atom-dark .ace_constant.ace_character,.ace-atom-dark .ace_constant.ace_language,.ace-atom-dark .ace_constant.ace_numeric,.ace-atom-dark .ace_keyword.ace_other.ace_unit,.ace-atom-dark .ace_support.ace_constant,.ace-atom-dark .ace_variable.ace_parameter {color: #fe73fd}.ace-atom-dark .ace_constant.ace_other {color: #EEEEEE}.ace-atom-dark .ace_invalid {color: #CED2CF;background-color: #DF5F5F}.ace-atom-dark .ace_invalid.ace_deprecated {color: #CED2CF;background-color: #B798BF}.ace-atom-dark .ace_fold {background-color: #7AA6DA;border-color: #DEDEDE}.ace-atom-dark .ace_entity.ace_name.ace_function,.ace-atom-dark .ace_support.ace_function,.ace-atom-dark .ace_variable {color: #7AA6DA}.ace-atom-dark .ace_support.ace_class,.ace-atom-dark .ace_support.ace_type {color: #E7C547}.ace-atom-dark .ace_heading,.ace-atom-dark .ace_markup.ace_heading,.ace-atom-dark .ace_string {color: #B9CA4A}.ace-atom-dark .ace_entity.ace_name.ace_tag,.ace-atom-dark .ace_entity.ace_other.ace_attribute-name,.ace-atom-dark .ace_meta.ace_tag,.ace-atom-dark .ace_string.ace_regexp,.ace-atom-dark .ace_variable {color: #96CBFE}.ace-atom-dark .ace_comment {color: #7a7a7a}.ace-atom-dark .ace_c9searchresults.ace_keyword {color: #C2C280;}.ace-atom-dark .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYFBXV/8PAAJoAXX4kT2EAAAAAElFTkSuQmCC) right repeat-y}
+/*# sourceURL=ace/css/ace-atom-dark */</style></head><body><!-- uiView:  --><div class="total-wrapper" ui-view=""><!-- uiView: header --><header ui-view="header"><div class="main-header"><!-- ngIf: !showHeaderBranding() --><a href="http://swagger.io/" target="_blank" class="logo" ng-if="!showHeaderBranding()"></a><!-- end ngIf: !showHeaderBranding() --><!-- ngIf: showHeaderBranding() --><section class="menu-bar"><!-- ngIf: showFileMenu() --><div class="file dropdown" ng-if="showFileMenu()"><button class="btn btn-default dropdown-toggle" ng-click="onFileMenuOpen()" data-toggle="dropdown" id="fileMenu"><span>File</span> <span class="caret"></span></button><ul class="dropdown-menu"><li><a dropdown-toggle="" ng-click="newProject()" tabindex="-1" track-event="file new"><i class="fa fa-file-text"></i>&nbsp;<span>New</span></a></li><li><a dropdown-toggle="" id="open-example" ng-click="openExamples()" tabindex="-1" track-event="file open-example"><i class="fa fa-folder-open highlighted"></i>&nbsp;<span>Open Example…</span></a></li><li class="divider"></li><li><a dropdown-toggle="" ng-click="openPasteJSON()" tabindex="-1" track-event="file paste-json"><i class="fa fa-clipboard"></i>&nbsp;<span>Paste JSON…</span></a></li><li><a dropdown-toggle="" ng-click="openImportUrl()" tabindex="-1" track-event="file import url"><i class="fa fa-link"></i>&nbsp;<span>Import URL…</span></a></li><li><a dropdown-toggle="" ng-click="openImportFile()" tabindex="-1" track-event="file import file"><i class="fa fa-file highlighted"></i>&nbsp;<span>Import File…</span></a></li><li class="divider"></li><li><a download="swagger.yaml" data-downloadurl="" href="" tabindex="-1" track-event="file download yaml"><i class="fa fa-download"></i>&nbsp;<span>Download YAML</span></a></li><li><a download="swagger.json" downloadurl="" href="" tabindex="-1" track-event="file download json"><i class="fa fa-download"></i>&nbsp;<span>Download JSON</span></a></li></ul></div><!-- end ngIf: showFileMenu() --><div class="preferences dropdown"><button id="preferences" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span>Preferences</span> <span class="caret"></span></button><ul class="dropdown-menu"><li><a class="font-size"><i class="fa fa-font"></i> Font Size&nbsp;&nbsp;&nbsp; <span><span ng-click="adjustFontSize(1)" stop-event="" class="adjust" track-event="preferences font+">+</span><span ng-click="adjustFontSize(-1)" stop-event="" class="adjust" track-event="preferences font-">–</span></span></a></li><li><a dropdown-toggle="" ng-click="openEditorPreferences()" tabindex="-1" track-event="preferences settings"><i class="fa fa-cogs"></i> <span>Editor Settings</span></a></li><li><a dropdown-toggle="" ng-click="resetSettings()" tabindex="-1" track-event="preferences reset-settings"><i class="fa fa-undo"></i> <span>Reset Editor Settings</span></a></li><li class="divider"></li><li><a dropdown-toggle="" tabindex="-1" ng-click="openPreferences()" track-event="preferences preferences"><i class="fa fa-wrench highlighted"></i> <span>Preferences…</span></a></li></ul></div><!-- Handling of Code Generator service availability issues --><!-- ngIf: serversNotAvailable --> <!-- ngIf: clientsNotAvailable --><!-- ngIf: servers && servers.length && !disableCodeGen --><div class="dropdown" ng-if="servers &amp;&amp; servers.length &amp;&amp; !disableCodeGen"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="ServerMenu"><span>Generate Server</span> <span class="caret"></span></button><ul class="dropdown-menu"><!-- ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server python-flask"><i class="fa fa-download"></i>&nbsp; <span class="name">Python Flask</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server jaxrs"><i class="fa fa-download"></i>&nbsp; <span class="name">JAX-RS</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server inflector"><i class="fa fa-download"></i>&nbsp; <span class="name">Inflector</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server nodejs"><i class="fa fa-download"></i>&nbsp; <span class="name">Node.js</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server scalatra"><i class="fa fa-download"></i>&nbsp; <span class="name">Scalatra</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server silex-PHP"><i class="fa fa-download"></i>&nbsp; <span class="name">Silex PHP</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server sinatra"><i class="fa fa-download"></i>&nbsp; <span class="name">Sinatra</span></a></li><!-- end ngRepeat: server in ::servers track by $index --><li ng-repeat="server in ::servers track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;server&#39;, server)" track-event="generate-server spring-mvc"><i class="fa fa-download"></i>&nbsp; <span class="name">Spring MVC</span></a></li><!-- end ngRepeat: server in ::servers track by $index --></ul></div><!-- end ngIf: servers && servers.length && !disableCodeGen --><!-- ngIf: clients && clients.length && !disableCodeGen --><div class="code-gen dropdown" ng-if="clients &amp;&amp; clients.length &amp;&amp; !disableCodeGen"><button class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="ClientMenu"><span>Generate Client</span> <span class="caret"></span></button><ul class="dropdown-menu"><!-- ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client android"><i class="fa fa-download"></i>&nbsp; <span class="name">Android</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client async-scala"><i class="fa fa-download"></i>&nbsp; <span class="name">Async Scala</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client csharp"><i class="fa fa-download"></i>&nbsp; <span class="name">C#</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client dart"><i class="fa fa-download"></i>&nbsp; <span class="name">Dart</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client flash"><i class="fa fa-download"></i>&nbsp; <span class="name">Flash</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client java"><i class="fa fa-download"></i>&nbsp; <span class="name">Java</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client objc"><i class="fa fa-download"></i>&nbsp; <span class="name">Objective-C</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client perl"><i class="fa fa-download"></i>&nbsp; <span class="name">Perl</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client php"><i class="fa fa-download"></i>&nbsp; <span class="name">PHP</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client python"><i class="fa fa-download"></i>&nbsp; <span class="name">Python</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client qt5cpp"><i class="fa fa-download"></i>&nbsp; <span class="name">Qt 5 C++</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client ruby"><i class="fa fa-download"></i>&nbsp; <span class="name">Ruby</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client scala"><i class="fa fa-download"></i>&nbsp; <span class="name">Scala</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client dynamic-html"><i class="fa fa-download"></i>&nbsp; <span class="name">Dynamic HTML</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client html"><i class="fa fa-download"></i>&nbsp; <span class="name">HTML</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client swagger"><i class="fa fa-download"></i>&nbsp; <span class="name">Swagger JSON</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client swagger-yaml"><i class="fa fa-download"></i>&nbsp; <span class="name">Swagger YAML</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client swift"><i class="fa fa-download"></i>&nbsp; <span class="name">Swift</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client tizen"><i class="fa fa-download"></i>&nbsp; <span class="name">Tizen</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client typescript-angular"><i class="fa fa-download"></i>&nbsp; <span class="name">Typescript Angular</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client typescript-node"><i class="fa fa-download"></i>&nbsp; <span class="name">Typescript Node</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client akka-scala"><i class="fa fa-download"></i>&nbsp; <span class="name">Akka Scala</span></a></li><!-- end ngRepeat: client in ::clients track by $index --><li ng-repeat="client in ::clients track by $index"><a dropdown-toggle="" tabindex="-1" ng-click="getSDK(&#39;client&#39;, client)" track-event="generate-client CsharpDotNet2"><i class="fa fa-download"></i>&nbsp; <span class="name">C# .NET 2.0</span></a></li><!-- end ngRepeat: client in ::clients track by $index --></ul></div><!-- end ngIf: clients && clients.length && !disableCodeGen --><div class="help dropdown"><button class="dropdown-icon btn btn-default dropdown-toggle" id="helpMenu" data-toggle="dropdown"><span>Help</span> <span class="caret"></span></button><ul class="dropdown-menu"><li><a tabindex="-1" href="https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md" target="_blank"><i class="fa fa-align-justify"></i>&nbsp; <span>Swagger 2.0 Specs</span></a></li><li><a tabindex="-1" href="http://swagger.io/" target="_blank"><i class="fa fa-share-square-o"></i>&nbsp; <span>Swagger Website</span></a></li><li><a dropdown-toggle="" tabindex="-1" ng-click="openAbout()"><i class="fa fa-info-circle"></i>&nbsp; <span>About Swagger Editor</span></a></li><li class="divider"></li><li><a href="https://github.com/swagger-api/swagger-editor/issues/new?labels=From%20Editor" target="_blank"><i class="fa fa-bug highlighted"></i>&nbsp; <span>Report A Bug</span></a></li><li class="divider"></li><li><a dropdown-toggle="" ng-click="toggleAboutEditor(true)" tabindex="-1"><i class="fa no-icon"></i>&nbsp; <span>Show Introduction Help</span></a></li></ul></div></section><section class="status-bar"><!-- ngIf: status --><div class="status success" ng-if="status"><!-- ngIf: statusClass == 'working' --> <!-- ngIf: statusClass == 'error' --> <!-- ngIf: statusClass == 'success' --><i ng-if="statusClass == &#39;success&#39;" class="fa fa-check"></i><!-- end ngIf: statusClass == 'success' --> <span>Processed with no error</span></div><!-- end ngIf: status --><!-- ngIf: showHeaderBranding() --></section></div></header><main ngf-drop="" ng-model="draggedFiles" ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="false" ngf-accept="&#39;.json,.yaml,.yml&#39;" class="ng-pristine ng-untouched ng-valid"><div ui-layout="{ flow : &#39;column&#39;, dividerSize: &#39;8px&#39;}" class="stretch ui-layout-column"><div class="editor pane stretch ui-layout-container" ui-layout-container="" style="width: 0px; left: 0px;"><!-- uiView: editor --><div ui-view="editor"><div class="editor-wrapper ng-pristine ng-untouched ng-valid ace_editor ace-atom-dark ace_dark" ng-model="$root.editorValue" ui-ace="{
+  useWrapMode : true,
+  mode: &#39;yaml&#39;,
+  onLoad: aceLoaded,
+  onChange: aceChanged}" style="font-family: &#39;Source Code Pro&#39;;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; left: 59px; top: 0px; height: 15px; width: 7.20031px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 895px; width: 55px;"><div class="ace_gutter-cell " style="height: 15px;">1</div><div class="ace_gutter-cell " style="height: 15px;">2<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">3</div><div class="ace_gutter-cell " style="height: 15px;">4</div><div class="ace_gutter-cell " style="height: 15px;">5</div><div class="ace_gutter-cell " style="height: 15px;">6<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">7</div><div class="ace_gutter-cell " style="height: 15px;">8</div><div class="ace_gutter-cell " style="height: 15px;">9</div><div class="ace_gutter-cell " style="height: 15px;">10<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">11</div><div class="ace_gutter-cell " style="height: 15px;">12</div><div class="ace_gutter-cell " style="height: 15px;">13</div><div class="ace_gutter-cell " style="height: 15px;">14</div><div class="ace_gutter-cell " style="height: 15px;">15<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">16<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">17</div><div class="ace_gutter-cell " style="height: 15px;">18</div><div class="ace_gutter-cell " style="height: 15px;">19</div><div class="ace_gutter-cell " style="height: 15px;">20</div><div class="ace_gutter-cell " style="height: 15px;">21<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">22<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">23</div><div class="ace_gutter-cell " style="height: 15px;">24<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">25</div><div class="ace_gutter-cell " style="height: 15px;">26<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">27</div><div class="ace_gutter-cell " style="height: 15px;">28<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">29</div><div class="ace_gutter-cell " style="height: 15px;">30<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">31</div><div class="ace_gutter-cell " style="height: 15px;">32<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">33</div><div class="ace_gutter-cell " style="height: 15px;">34<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">35</div><div class="ace_gutter-cell " style="height: 15px;">36<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">37</div><div class="ace_gutter-cell " style="height: 15px;">38</div><div class="ace_gutter-cell " style="height: 15px;">39<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">40<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">41<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">42</div><div class="ace_gutter-cell " style="height: 15px;">43<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">44</div><div class="ace_gutter-cell " style="height: 15px;">45<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">46<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">47</div><div class="ace_gutter-cell " style="height: 15px;">48</div><div class="ace_gutter-cell " style="height: 15px;">49</div><div class="ace_gutter-cell " style="height: 15px;">50<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">51</div><div class="ace_gutter-cell " style="height: 15px;">52<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">53</div><div class="ace_gutter-cell " style="height: 15px;">54<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">55<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">56</div><div class="ace_gutter-cell " style="height: 15px;">57<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div><div class="ace_gutter-cell " style="height: 15px;">58</div><div class="ace_gutter-cell " style="height: 15px;">59<span class="ace_fold-widget ace_start ace_open" style="height: 15px;"></span></div></div><div class="ace_gutter-active-line" style="top: 0px; height: 15px;"></div></div><div class="ace_scroller" style="left: 55px; right: 21px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 880px; height: 895px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 580.025px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:15px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">swagger</span><span class="ace_keyword">: </span><span class="ace_string">'2.0'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">info</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  version</span><span class="ace_keyword">: </span>v1</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  title</span><span class="ace_keyword">: </span>INDIGO Datacloud Orchestrator</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>The INDIGO Datacloud Orchestrator APIs</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  contact</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  name</span><span class="ace_keyword">: </span>Reply</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  url</span><span class="ace_keyword">: </span><span class="ace_string">'http://TBD'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  email</span><span class="ace_keyword">: </span>m.bassi@reply.it</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  license</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  name</span><span class="ace_keyword">: </span>Apache <span class="ace_constant ace_numeric">2.0</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  url</span><span class="ace_keyword">: </span><span class="ace_string">'http://www.apache.org'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">basePath</span><span class="ace_keyword">: </span>/v1</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">host</span><span class="ace_keyword">: </span>TBD</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">securityDefinitions</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  apiKey</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  type</span><span class="ace_keyword">: </span>apiKey</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  name</span><span class="ace_keyword">: </span>X-Auth-Token</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  in</span><span class="ace_keyword">: </span>header</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span><span class="ace_string">'Still T.B.D. !'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">responses</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  BadRequest</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Bad Request <span class="ace_paren ace_lparen">(</span>some request data is incorrect<span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/Error'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  Unauthorized</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Unauthorized</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/Error'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  NotFound</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Bad Request <span class="ace_paren ace_lparen">(</span>some request data is incorrect<span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/Error'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">  ServerError</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Server Error</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/Error'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_meta ace_tag">paths</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px">  /<span class="ace_meta ace_tag">deployments</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  post</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Create a deployment <span class="ace_paren ace_lparen">(</span>Virtual Infrastructure or a Mesos service<span class="ace_paren ace_rparen">)</span>.</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  consumes</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_list ace_markup">  - </span>application/json</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  parameters</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_list ace_markup">  - </span><span class="ace_meta ace_tag">name</span><span class="ace_keyword">: </span>deploymentRequest</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  in</span><span class="ace_keyword">: </span>body</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>the virtual infrastructure deployment request</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  required</span><span class="ace_keyword">: </span><span class="ace_constant ace_language ace_boolean">true</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/DeploymentRequest'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  produces</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_list ace_markup">  - </span>application/json</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  responses</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  <span class="ace_string">'201'</span>:</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  description</span><span class="ace_keyword">: </span>Successfully created</div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_meta ace_tag">  schema</span><span class="ace_keyword">:</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  $<span class="ace_meta ace_tag">ref</span><span class="ace_keyword">: </span><span class="ace_string">'#/definitions/Deployment'</span></div></div><div class="ace_line_group" style="height:15px"><div class="ace_line" style="height:15px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  <span class="ace_string">'400'</span>:</div></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 7.20031px; height: 15px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 26px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 26px; height: 3675px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 26px; left: 55px; right: 21px;"><div class="ace_scrollbar-inner" style="height: 26px; width: 914px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div></div></div><div ui-splitbar="" class="stretch ui-splitbar" style="width: 8px; left: 0px;"><a><span class="glyphicon glyphicon-chevron-right"></span></a><a style="display: none;"><span class="glyphicon glyphicon-chevron-right"></span></a></div><div class="preview pane stretch ui-layout-container" ui-layout-container="" style="width: 1912px; left: 8px;"><!-- uiView: preview --><div ui-view="preview"><div class="preview-wrapper"><!-- ngIf: isDirty --><!-- ngIf: errors.length || warnings.length --><!-- ngInclude: undefined --><ng-include src="&#39;templates/specs-info.html&#39;"><div class="info"><header class="info-header"><h3 class="section-header"><a ng-click="
+        specs.info.$folded = !specs.info.$folded;
+        foldEditor([&#39;info&#39;], specs.info.$folded);
+        ">INDIGO Datacloud Orchestrator</a></h3></header><div class="info-container section-content" collapse-when="specs.info.$folded"><div marked="specs.info.description"><p>The INDIGO Datacloud Orchestrator APIs</p>
+</div><h4>Version <span>v1</span></h4><!-- ngIf: specs.info.contact --><div class="contact info-box" ng-if="specs.info.contact"><h4>Contact information</h4><!-- ngIf: specs.info.contact.name --><p ng-if="specs.info.contact.name">Reply</p><!-- end ngIf: specs.info.contact.name --><!-- ngIf: specs.info.contact.email --><p ng-if="specs.info.contact.email" ng-bind-html="specs.info.contact.email | linky:&#39;_blank&#39;"><a target="_blank" href="mailto:m.bassi@reply.it">m.bassi@reply.it</a></p><!-- end ngIf: specs.info.contact.email --><!-- ngIf: specs.info.contact.url --><p ng-if="specs.info.contact.url" ng-bind-html="specs.info.contact.url | linky:&#39;_blank&#39;"><a target="_blank" href="http://tbd/">http://TBD</a></p><!-- end ngIf: specs.info.contact.url --></div><!-- end ngIf: specs.info.contact --><!-- ngIf: specs.info.termsOfService --><!-- ngIf: specs.externalDocs --><!-- ngIf: specs.info.license --><div ng-if="specs.info.license" class="license info-box"><h4>License</h4><!-- ngIf: !specs.info.license.url --><!-- ngIf: specs.info.license.url --><p ng-if="specs.info.license.url"><a target="_blank" href="http://www.apache.org/">Apache 2.0</a></p><!-- end ngIf: specs.info.license.url --></div><!-- end ngIf: specs.info.license --></div></div></ng-include><!-- ngIf: specs.securityDefinitions --><!-- ngInclude: undefined --><ng-include src="&#39;templates/security.html&#39;" ng-if="specs.securityDefinitions"><div class="security" ng-controller="SecurityCtrl"><header><h3 class="section-header"><a ng-click="
+        specs.securityDefinitions.$folded = !specs.securityDefinitions.$folded;
+        foldEditor([&#39;securityDefinitions&#39;], specs.securityDefinitions.$folded);
+      ">Security</a></h3></header><div class="security-definitions" collapse-when="specs.securityDefinitions.$folded"><!-- ngRepeat: (securityDefinitionName, securityDefinition) in specs.securityDefinitions --><div ng-repeat="(securityDefinitionName, securityDefinition) in specs.securityDefinitions" class="security-definition apiKey"><header><h4><!-- ngIf: isAuthenticated(securityDefinitionName) --> <span>apiKey</span> <span class="security-type">(API Key)</span><div class="authentication"><div><button ng-click="authenticate(securityDefinitionName, securityDefinition)" class="authenticate">Authenticate</button></div></div></h4></header><section><!-- ngIf: securityDefinition.description --><p ng-if="securityDefinition.description" marked="securityDefinition.description"><p>Still T.B.D. !</p>
+</p><!-- end ngIf: securityDefinition.description --><table class="table"><tbody><!-- ngIf: securityDefinition.name --><tr ng-if="securityDefinition.name"><td>Name</td><td>X-Auth-Token</td></tr><!-- end ngIf: securityDefinition.name --><!-- ngIf: securityDefinition.in --><tr ng-if="securityDefinition.in"><td>In</td><td>header</td></tr><!-- end ngIf: securityDefinition.in --><!-- ngIf: securityDefinition.flow --><!-- ngIf: securityDefinition.authorizationUrl --><!-- ngIf: securityDefinition.tokenUrl --></tbody></table><!-- ngIf: securityDefinition.scopes --><!-- ngIf: securityDefinition.scopes --></section></div><!-- end ngRepeat: (securityDefinitionName, securityDefinition) in specs.securityDefinitions --></div></div></ng-include><!-- end ngIf: specs.securityDefinitions --><!-- ngInclude: undefined --><ng-include src="&#39;templates/tags.html&#39;"><div class="root tags"><!-- ngIf: stateParams.tags --><!-- ngIf: !stateParams.tags && getAllTags().length --></div></ng-include><header><h3 class="section-header"><a ng-click="
+          specs.paths.$folded = !specs.paths.$folded;
+          foldEditor([&#39;paths&#39;], specs.paths.$folded);"><span>Paths</span></a> <span class="on-hover"><a ng-click="listAllOperation()">List all operations</a></span></h3></header><ul class="paths" collapse-when="specs.paths.$folded"><!-- ngRepeat: (pathName, path) in specs.paths --><!-- ngIf: showPath(path, pathName) --><!-- ngInclude:  --><li class="path" ng-include="" src="&#39;templates/path.html&#39;" ng-repeat="(pathName, path) in specs.paths" ng-if="showPath(path, pathName)"><header ng-click="
+    path.$folded = !path.$folded;
+    foldEditor([&#39;paths&#39;, pathName], path.$folded)"><h2><a>/deployments</a></h2><a class="jump-to-yaml" ng-click="focusEdit($event, [&#39;paths&#39;, pathName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a></header><ul class="operations" collapse-when="path.$folded"><!-- ngRepeat: (operationName, operation) in path --><!-- ngIf: showOperation(operation, operationName) --><li class="post operation" scroll-into-view-when="isInFocus([&#39;paths&#39;, pathName, operationName])" ng-repeat="(operationName, operation) in path" ng-if="showOperation(operation, operationName)"><header ng-click="
+      operation.$folded = !operation.$folded;
+      foldEditor([&#39;paths&#39;, pathName, operationName], operation.$folded)
+    "><a class="focus-editor" ng-click="focusEdit($event, [&#39;paths&#39;, pathName, operationName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a><div class="http-method">POST /deployments</div><!-- ngIf: operation.deprecated --></header><div class="content" collapse-when="operation.$folded"><div class="tags"><!-- ngRepeat: tag in operation.tags track by $index --></div><!-- ngIf: operation.summary --><!-- ngIf: operation.description --><section class="description" ng-if="operation.description"><h4>Description</h4><div marked="operation.description"><p>Create a deployment (Virtual Infrastructure or a Mesos service).</p>
+</div></section><!-- end ngIf: operation.description --><!-- ngIf: getParameters().length --><section class="parameters" ng-if="getParameters().length"><h4>Parameters</h4><div><table class="params"><thead><tr><th>Name</th><th>Located in</th><th>Description</th><th>Required</th><th>Schema</th></tr></thead><tbody><!-- ngRepeat: parameter in getParameters() track by $index --><tr ng-repeat="parameter in getParameters() track by $index"><td><a ng-click="focusEdit($event, [
+                      &#39;paths&#39;,
+                      pathName,
+                      operationName,
+                      &#39;parameters&#39;,
+                      $index
+                    ])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="mono">deploymentRequest</span></a></td><td>body</td><td marked="parameter.description"><p>the virtual infrastructure deployment request</p>
+</td><td>Yes</td><td><table class="schema-model" ng-class="{hidden: !schema}" schema="parameter.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">1</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"DeploymentRequest"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>DeploymentRequest <span class="opening brace">{</span></a>
+          <div class="inner">
+            
+          <div class="property">
+          <span class="name">template:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">parameters:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">undefined</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></td></tr><!-- end ngRepeat: parameter in getParameters() track by $index --></tbody></table></div></section><!-- end ngIf: getParameters().length --><!-- ngIf: operation --><section class="responses" ng-if="operation"><h4>Responses</h4><div><table class="respns"><thead><tr><th>Code</th><th>Description</th><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><th ng-if="hasAResponseWithSchema(operation.responses)">Schema</th><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr></thead><tbody><!-- ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code green">201</span></a></td><td marked="response.description"><p>Successfully created</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of a deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">2</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Deployment <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of a deployment</div>
+            
+          <div class="property">
+          <span class="name">id:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">links:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Links<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div><div class="property">
+          <span class="name">outputs:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span>Outputs </a>
+            <span class="type">undefined</span>
+        </div></div></div><div class="property">
+          <span class="name">creationTime:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">status:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">task:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">resources:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Resources<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">400</span></a></td><td marked="response.description"><p>Bad Request (some request data is incorrect)</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">401</span></a></td><td marked="response.description"><p>Unauthorized</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code red">500</span></a></td><td marked="response.description"><p>Server Error</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --></tbody></table></div></section><!-- end ngIf: operation --><!-- ngIf: operation.security && operation.security.length --><section class="security" ng-if="operation.security &amp;&amp; operation.security.length"><h4>Security</h4><table class="security"><thead><tr><th>Security Schema</th><th>Scopes</th></tr></thead><tbody><!-- ngRepeat: security in operation.security track by $index --><tr ng-repeat="security in operation.security track by $index"><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security">apiKey</td><!-- end ngRepeat: (securityName, securityValues) in security --><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security"><!-- ngRepeat: value in securityValues track by $index --></td><!-- end ngRepeat: (securityName, securityValues) in security --></tr><!-- end ngRepeat: security in operation.security track by $index --></tbody></table></section><!-- end ngIf: operation.security && operation.security.length --><!-- ngIf: enableTryIt --><section class="try-operation" ng-if="enableTryIt"><!-- ngIf: !isTryOpen --><button class="border-only try-it" ng-class="{trying: isTryOpen}" ng-click="toggleTry()" ng-if="!isTryOpen" track-event="try-operation">Try this operation</button><!-- end ngIf: !isTryOpen --> <!-- ngIf: isTryOpen --><!-- ngIf: isTryOpen --></section><!-- end ngIf: enableTryIt --></div></li><!-- end ngIf: showOperation(operation, operationName) --><!-- end ngRepeat: (operationName, operation) in path --><!-- ngIf: showOperation(operation, operationName) --><li class="get operation" scroll-into-view-when="isInFocus([&#39;paths&#39;, pathName, operationName])" ng-repeat="(operationName, operation) in path" ng-if="showOperation(operation, operationName)"><header ng-click="
+      operation.$folded = !operation.$folded;
+      foldEditor([&#39;paths&#39;, pathName, operationName], operation.$folded)
+    "><a class="focus-editor" ng-click="focusEdit($event, [&#39;paths&#39;, pathName, operationName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a><div class="http-method">GET /deployments</div><!-- ngIf: operation.deprecated --></header><div class="content" collapse-when="operation.$folded"><div class="tags"><!-- ngRepeat: tag in operation.tags track by $index --></div><!-- ngIf: operation.summary --><!-- ngIf: operation.description --><section class="description" ng-if="operation.description"><h4>Description</h4><div marked="operation.description"><p>Returns the list of currently deployed Virtual Infrastructures and Mesos services.</p>
+<p> NOTES: add some filtering options</p>
+</div></section><!-- end ngIf: operation.description --><!-- ngIf: getParameters().length --><!-- ngIf: operation --><section class="responses" ng-if="operation"><h4>Responses</h4><div><table class="respns"><thead><tr><th>Code</th><th>Description</th><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><th ng-if="hasAResponseWithSchema(operation.responses)">Schema</th><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr></thead><tbody><!-- ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code green">200</span></a></td><td marked="response.description"><p>Ok</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"array"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">items:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Deployments"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Deployments<span class="opening bracket">[</span></a>
+          <div class="inner">
+          <div class="json-schema-view collapsed"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Deployment <span class="opening brace">{</span>
+              <span class="closing brace" ng-if="isCollapsed">}</span>
+          </a>
+          <div class="inner">
+            
+          </div>
+        </div></div></div>
+          <span class="closing bracket">]</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">401</span></a></td><td marked="response.description"><p>Unauthorized</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code red">500</span></a></td><td marked="response.description"><p>Server Error</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --></tbody></table></div></section><!-- end ngIf: operation --><!-- ngIf: operation.security && operation.security.length --><section class="security" ng-if="operation.security &amp;&amp; operation.security.length"><h4>Security</h4><table class="security"><thead><tr><th>Security Schema</th><th>Scopes</th></tr></thead><tbody><!-- ngRepeat: security in operation.security track by $index --><tr ng-repeat="security in operation.security track by $index"><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security">apiKey</td><!-- end ngRepeat: (securityName, securityValues) in security --><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security"><!-- ngRepeat: value in securityValues track by $index --></td><!-- end ngRepeat: (securityName, securityValues) in security --></tr><!-- end ngRepeat: security in operation.security track by $index --></tbody></table></section><!-- end ngIf: operation.security && operation.security.length --><!-- ngIf: enableTryIt --><section class="try-operation" ng-if="enableTryIt"><!-- ngIf: !isTryOpen --><button class="border-only try-it" ng-class="{trying: isTryOpen}" ng-click="toggleTry()" ng-if="!isTryOpen" track-event="try-operation">Try this operation</button><!-- end ngIf: !isTryOpen --> <!-- ngIf: isTryOpen --><!-- ngIf: isTryOpen --></section><!-- end ngIf: enableTryIt --></div></li><!-- end ngIf: showOperation(operation, operationName) --><!-- end ngRepeat: (operationName, operation) in path --></ul></li><!-- end ngIf: showPath(path, pathName) --><!-- end ngRepeat: (pathName, path) in specs.paths --><!-- ngIf: showPath(path, pathName) --><!-- ngInclude:  --><li class="path" ng-include="" src="&#39;templates/path.html&#39;" ng-repeat="(pathName, path) in specs.paths" ng-if="showPath(path, pathName)"><header ng-click="
+    path.$folded = !path.$folded;
+    foldEditor([&#39;paths&#39;, pathName], path.$folded)"><h2><a>/deployments/{deploymentId}</a></h2><a class="jump-to-yaml" ng-click="focusEdit($event, [&#39;paths&#39;, pathName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a></header><ul class="operations" collapse-when="path.$folded"><!-- ngRepeat: (operationName, operation) in path --><!-- ngIf: showOperation(operation, operationName) --><li class="get operation" scroll-into-view-when="isInFocus([&#39;paths&#39;, pathName, operationName])" ng-repeat="(operationName, operation) in path" ng-if="showOperation(operation, operationName)"><header ng-click="
+      operation.$folded = !operation.$folded;
+      foldEditor([&#39;paths&#39;, pathName, operationName], operation.$folded)
+    "><a class="focus-editor" ng-click="focusEdit($event, [&#39;paths&#39;, pathName, operationName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a><div class="http-method">GET /deployments/{deploymentId}</div><!-- ngIf: operation.deprecated --></header><div class="content" collapse-when="operation.$folded"><div class="tags"><!-- ngRepeat: tag in operation.tags track by $index --></div><!-- ngIf: operation.summary --><!-- ngIf: operation.description --><section class="description" ng-if="operation.description"><h4>Description</h4><div marked="operation.description"><p>Returns the specified deployment.</p>
+</div></section><!-- end ngIf: operation.description --><!-- ngIf: getParameters().length --><section class="parameters" ng-if="getParameters().length"><h4>Parameters</h4><div><table class="params"><thead><tr><th>Name</th><th>Located in</th><th>Description</th><th>Required</th><th>Schema</th></tr></thead><tbody><!-- ngRepeat: parameter in getParameters() track by $index --><tr ng-repeat="parameter in getParameters() track by $index"><td><a ng-click="focusEdit($event, [
+                      &#39;paths&#39;,
+                      pathName,
+                      operationName,
+                      &#39;parameters&#39;,
+                      $index
+                    ])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="mono">deploymentId</span></a></td><td>path</td><td marked="parameter.description"><p>the deployment id</p>
+</td><td>Yes</td><td><table class="schema-model" ng-class="{hidden: !schema}" schema="parameter.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"string"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">format:</span>
+        <span class="value">
+            <span class="string  ">"uuid"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="primitive">
+            <span class="type">string</span>
+            <span class="format">(uuid)</span>
+        </div></div></td></tr></tbody></table></td></tr><!-- end ngRepeat: parameter in getParameters() track by $index --></tbody></table></div></section><!-- end ngIf: getParameters().length --><!-- ngIf: operation --><section class="responses" ng-if="operation"><h4>Responses</h4><div><table class="respns"><thead><tr><th>Code</th><th>Description</th><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><th ng-if="hasAResponseWithSchema(operation.responses)">Schema</th><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr></thead><tbody><!-- ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code green">200</span></a></td><td marked="response.description"><p>Ok</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of a deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">2</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Deployment <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of a deployment</div>
+            
+          <div class="property">
+          <span class="name">id:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">links:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Links<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div><div class="property">
+          <span class="name">outputs:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span>Outputs </a>
+            <span class="type">undefined</span>
+        </div></div></div><div class="property">
+          <span class="name">creationTime:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">status:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">task:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">resources:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Resources<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">401</span></a></td><td marked="response.description"><p>Unauthorized</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">404</span></a></td><td marked="response.description"><p>Bad Request (some request data is incorrect)</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code red">500</span></a></td><td marked="response.description"><p>Server Error</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --></tbody></table></div></section><!-- end ngIf: operation --><!-- ngIf: operation.security && operation.security.length --><section class="security" ng-if="operation.security &amp;&amp; operation.security.length"><h4>Security</h4><table class="security"><thead><tr><th>Security Schema</th><th>Scopes</th></tr></thead><tbody><!-- ngRepeat: security in operation.security track by $index --><tr ng-repeat="security in operation.security track by $index"><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security">apiKey</td><!-- end ngRepeat: (securityName, securityValues) in security --><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security"><!-- ngRepeat: value in securityValues track by $index --></td><!-- end ngRepeat: (securityName, securityValues) in security --></tr><!-- end ngRepeat: security in operation.security track by $index --></tbody></table></section><!-- end ngIf: operation.security && operation.security.length --><!-- ngIf: enableTryIt --><section class="try-operation" ng-if="enableTryIt"><!-- ngIf: !isTryOpen --><button class="border-only try-it" ng-class="{trying: isTryOpen}" ng-click="toggleTry()" ng-if="!isTryOpen" track-event="try-operation">Try this operation</button><!-- end ngIf: !isTryOpen --> <!-- ngIf: isTryOpen --><!-- ngIf: isTryOpen --></section><!-- end ngIf: enableTryIt --></div></li><!-- end ngIf: showOperation(operation, operationName) --><!-- end ngRepeat: (operationName, operation) in path --><!-- ngIf: showOperation(operation, operationName) --><li class="delete operation" scroll-into-view-when="isInFocus([&#39;paths&#39;, pathName, operationName])" ng-repeat="(operationName, operation) in path" ng-if="showOperation(operation, operationName)"><header ng-click="
+      operation.$folded = !operation.$folded;
+      foldEditor([&#39;paths&#39;, pathName, operationName], operation.$folded)
+    "><a class="focus-editor" ng-click="focusEdit($event, [&#39;paths&#39;, pathName, operationName])" tooltip-placement="left" tooltip="Jump to YAML" tooltip-trigger="mouseenter"></a><div class="http-method">DELETE /deployments/{deploymentId}</div><!-- ngIf: operation.deprecated --></header><div class="content" collapse-when="operation.$folded"><div class="tags"><!-- ngRepeat: tag in operation.tags track by $index --></div><!-- ngIf: operation.summary --><!-- ngIf: operation.description --><section class="description" ng-if="operation.description"><h4>Description</h4><div marked="operation.description"><p>Deletes the specified deployment.</p>
+</div></section><!-- end ngIf: operation.description --><!-- ngIf: getParameters().length --><section class="parameters" ng-if="getParameters().length"><h4>Parameters</h4><div><table class="params"><thead><tr><th>Name</th><th>Located in</th><th>Description</th><th>Required</th><th>Schema</th></tr></thead><tbody><!-- ngRepeat: parameter in getParameters() track by $index --><tr ng-repeat="parameter in getParameters() track by $index"><td><a ng-click="focusEdit($event, [
+                      &#39;paths&#39;,
+                      pathName,
+                      operationName,
+                      &#39;parameters&#39;,
+                      $index
+                    ])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="mono">deploymentId</span></a></td><td>path</td><td marked="parameter.description"><p>the deployment id</p>
+</td><td>Yes</td><td><table class="schema-model" ng-class="{hidden: !schema}" schema="parameter.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"string"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">format:</span>
+        <span class="value">
+            <span class="string  ">"uuid"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="primitive">
+            <span class="type">string</span>
+            <span class="format">(uuid)</span>
+        </div></div></td></tr></tbody></table></td></tr><!-- end ngRepeat: parameter in getParameters() track by $index --></tbody></table></div></section><!-- end ngIf: getParameters().length --><!-- ngIf: operation --><section class="responses" ng-if="operation"><h4>Responses</h4><div><table class="respns"><thead><tr><th>Code</th><th>Description</th><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><th ng-if="hasAResponseWithSchema(operation.responses)">Schema</th><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr></thead><tbody><!-- ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code green">204</span></a></td><td marked="response.description"><p>No Content</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">401</span></a></td><td marked="response.description"><p>Unauthorized</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code yellow">404</span></a></td><td marked="response.description"><p>Bad Request (some request data is incorrect)</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --><tr ng-repeat="(responseCode, response) in operation.responses"><td><a ng-click="focusEdit($event, [
+                    &#39;paths&#39;,
+                    pathName,
+                    operationName,
+                    &#39;responses&#39;,
+                    responseCode])" tooltip-placement="top" tooltip="Jump to YAML" tooltip-trigger="mouseenter"><span class="resp-code red">500</span></a></td><td marked="response.description"><p>Server Error</p>
+</td><!-- ngIf: hasAResponseWithHeaders(operation.responses) --><!-- ngIf: hasAResponseWithSchema(operation.responses) --><td ng-if="hasAResponseWithSchema(operation.responses)"><!-- ngIf: response.schema --><table class="schema-model" ng-class="{hidden: !schema}" ng-if="response.schema" schema="response.schema"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table><!-- end ngIf: response.schema --></td><!-- end ngIf: hasAResponseWithSchema(operation.responses) --></tr><!-- end ngRepeat: (responseCode, response) in operation.responses --></tbody></table></div></section><!-- end ngIf: operation --><!-- ngIf: operation.security && operation.security.length --><section class="security" ng-if="operation.security &amp;&amp; operation.security.length"><h4>Security</h4><table class="security"><thead><tr><th>Security Schema</th><th>Scopes</th></tr></thead><tbody><!-- ngRepeat: security in operation.security track by $index --><tr ng-repeat="security in operation.security track by $index"><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security">apiKey</td><!-- end ngRepeat: (securityName, securityValues) in security --><!-- ngRepeat: (securityName, securityValues) in security --><td ng-repeat="(securityName, securityValues) in security"><!-- ngRepeat: value in securityValues track by $index --></td><!-- end ngRepeat: (securityName, securityValues) in security --></tr><!-- end ngRepeat: security in operation.security track by $index --></tbody></table></section><!-- end ngIf: operation.security && operation.security.length --><!-- ngIf: enableTryIt --><section class="try-operation" ng-if="enableTryIt"><!-- ngIf: !isTryOpen --><button class="border-only try-it" ng-class="{trying: isTryOpen}" ng-click="toggleTry()" ng-if="!isTryOpen" track-event="try-operation">Try this operation</button><!-- end ngIf: !isTryOpen --> <!-- ngIf: isTryOpen --><!-- ngIf: isTryOpen --></section><!-- end ngIf: enableTryIt --></div></li><!-- end ngIf: showOperation(operation, operationName) --><!-- end ngRepeat: (operationName, operation) in path --></ul></li><!-- end ngIf: showPath(path, pathName) --><!-- end ngRepeat: (pathName, path) in specs.paths --></ul><!-- ngIf: specs.definitions --><header ng-if="specs.definitions"><h3 class="section-header"><a ng-click="
+        specs.definitions.$folded = !specs.definitions.$folded;
+        foldEditor([&#39;definitions&#39;], specs.definitions.$folded);
+      ">Models</a> <span class="on-hover"><a ng-click="listAllDefnitions()">List all models</a></span></h3></header><!-- end ngIf: specs.definitions --><!-- ngIf: showDefinitions(specs.definitions) --><ul class="section-content definitions" ng-if="showDefinitions(specs.definitions)" collapse-when="specs.definitions.$folded"><!-- ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">DeploymentRequest</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">1</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"DeploymentRequest"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>DeploymentRequest <span class="opening brace">{</span></a>
+          <div class="inner">
+            
+          <div class="property">
+          <span class="name">template:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">parameters:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">undefined</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Deployments</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"array"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">items:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Deployments"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Deployments<span class="opening bracket">[</span></a>
+          <div class="inner">
+          <div class="json-schema-view collapsed"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Deployment <span class="opening brace">{</span>
+              <span class="closing brace" ng-if="isCollapsed">}</span>
+          </a>
+          <div class="inner">
+            
+          </div>
+        </div></div></div>
+          <span class="closing bracket">]</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Deployment</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of a deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">2</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Deployment <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of a deployment</div>
+            
+          <div class="property">
+          <span class="name">id:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">links:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Links<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div><div class="property">
+          <span class="name">outputs:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span>Outputs </a>
+            <span class="type">undefined</span>
+        </div></div></div><div class="property">
+          <span class="name">creationTime:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">status:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">task:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div><div class="property">
+          <span class="name">resources:</span>
+        <div class="json-schema-view collapsed"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Resources<span class="opening bracket">[</span><span class="closing bracket">]</span></a>
+          <div class="inner">
+          </div>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Link</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">2</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Link"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Link <span class="opening brace">{</span></a>
+          <div class="inner">
+            
+          <div class="property">
+          <span class="name">href:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">rel:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Links</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"HATEOAS resource links"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"array"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">items:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Links"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Links<span class="opening bracket">[</span></a>
+          <div class="inner">
+              <div class="description">HATEOAS resource links</div>
+          <div class="json-schema-view collapsed"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Link <span class="opening brace">{</span>
+              <span class="closing brace" ng-if="isCollapsed">}</span>
+          </a>
+          <div class="inner">
+            
+          </div>
+        </div></div></div>
+          <span class="closing bracket">]</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Outputs</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"The output parameters of the deployment, in the form of a Map of (String, String)"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">additionalProperties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Outputs"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span>Outputs </a>
+            <span class="type">undefined</span>
+            <div class="inner description">The output parameters of the deployment, in the form of a Map of (String, String)</div>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Resources</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the list of TOSCA resources defining the deployment"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">type:</span>
+        <span class="value">
+            <span class="string  ">"array"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">items:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Resources"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="array">
+          <a class="title"><span class="toggle-handle"></span>Resources<span class="opening bracket">[</span></a>
+          <div class="inner">
+              <div class="description">the list of TOSCA resources defining the deployment</div>
+          <div class="json-schema-view collapsed"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Resource <span class="opening brace">{</span>
+              <span class="closing brace" ng-if="isCollapsed">}</span>
+          </a>
+          <div class="inner">
+            
+          </div>
+        </div></div></div>
+          <span class="closing bracket">]</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Resource</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"a generic TOSCA node"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">1</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Resource"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Resource <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">a generic TOSCA node</div>
+            
+          <div class="property">
+          <span class="name">id:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">link:</span>
+        <div class="json-schema-view collapsed"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Link <span class="opening brace">{</span>
+              <span class="closing brace" ng-if="isCollapsed">}</span>
+          </a>
+          <div class="inner">
+            
+          </div>
+        </div></div></div><div class="property">
+          <span class="name">status:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <a class="title"><span class="toggle-handle"></span> </a>
+            <span class="type">string</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --><!-- ngIf: !isVendorExtension(modelName) --><li class="definition" ng-repeat="(modelName, model) in specs.definitions" ng-if="!isVendorExtension(modelName)" scroll-into-view-when="isInFocus([&#39;definitions&#39;, modelName])"><h4><a ng-click="
+              model.$folded = !model.$folded;
+              foldEditor([&#39;definitions&#39;, modelName], model.$folded)
+            " class="definition-title">Error</a></h4><div collapse-when="model.$folded"><table class="schema-model" ng-class="{hidden: !schema}" schema="model"><tbody><tr><td><a class="toggle" ng-click="switchMode()" title="Switch to json">⇄</a></td><td class="view json ng-hide" ng-show="mode === &#39;json&#39;"><div class="json-formatter-row open">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">description:</span>
+        <span class="value">
+            <span class="string  ">"the representation of an error, defined by numeric code identifier, a title and a displayable message"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">required:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Array</span>
+                <span><span class="bracket">[</span><span class="number">3</span><span class="bracket">]</span></span>
+            </span>
+        </span>
+      </a>
+      <div class="children object array "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="toggler"></span>
+          <span class="key">properties:</span>
+        <span class="value">
+            <span>
+              <span class="constructor-name">Object</span>
+            </span>
+        </span>
+      </a>
+      <div class="children object  "></div>
+    </div><div class="json-formatter-row">
+      <a class="toggler-link">
+          <span class="key">title:</span>
+        <span class="value">
+            <span class="string  ">"Error"</span>
+        </span>
+      </a>
+      <div class="children   "></div>
+    </div></div>
+    </div></td><td class="view schema" ng-show="mode === &#39;schema&#39;"><div class="json-schema-view"><div class="object">
+          <a class="title"><span class="toggle-handle"></span>Error <span class="opening brace">{</span></a>
+          <div class="inner">
+              <div class="description">the representation of an error, defined by numeric code identifier, a title and a displayable message</div>
+            
+          <div class="property">
+          <span class="name">code:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">integer</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">title:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div><div class="property">
+          <span class="name">message:</span>
+        <div class="json-schema-view collapsed"><div class="primitive">
+            <span class="type">string</span>
+            <span class="required">*</span>
+        </div></div></div></div>
+          <span class="closing brace">}</span>
+        </div></div></td></tr></tbody></table></div></li><!-- end ngIf: !isVendorExtension(modelName) --><!-- end ngRepeat: (modelName, model) in specs.definitions --></ul><!-- end ngIf: showDefinitions(specs.definitions) --></div></div></div></div><!-- ngIf: showAbout --><div class="file-drag"><div class="dash"><p>Drop your file here</p></div></div></main></div><script async="" src="./Swagger Editor_files/analytics.js"></script><script src="./Swagger Editor_files/vendor.js"></script><script src="./Swagger Editor_files/scripts.js"></script><script src="./Swagger Editor_files/branding.js"></script><iframe class="transover-tooltip" style="text-align: left; border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px; position: fixed; border-radius: 5px; z-index: 2147483647; top: -1500px; display: none; background: rgb(252, 247, 217);"></iframe><iframe class="transover-tooltip" style="text-align: left; border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px; position: fixed; border-radius: 5px; z-index: 2147483647; top: -1500px; display: none; background: rgb(252, 247, 217);"></iframe></body></html>
